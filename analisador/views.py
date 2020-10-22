@@ -5,7 +5,7 @@ def login(request):
     return render(request,'login.html',{})
 
 def cadastrar_usuario(request):
-    return render(request,'cadastrar-usuario.html',{})
+    return render(request,'cadastrar-usuario.html',{'form':form})
 
 def analise_grafico(request):
     return render(request,'analise-grafico.html',{})
