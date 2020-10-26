@@ -13,10 +13,6 @@ def cadastrar_usuario(request):
         form = UsuarioForm(request.POST)
         if form.is_valid():
             usuario = form.save(commit=False)
-            usuario.nome = request.nome
-            usuario.email = request.email
-            usuario.senha = request.password
-            usuario.funcao = request.sel1
             usuario.save()
             return redirect('home')
     else:

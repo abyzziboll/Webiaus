@@ -40,39 +40,9 @@
             <!-- FORMULÁRIO DE CADASTRO -->
             <form method="POST" name="f1" class="post-form">{% csrf_token %}
               <h1 class="h1-cadastro-usuario-webiaus">Cadastrar Usuário</h1>
-              <br>
-              <div>
-                <div><input type="text" class="form-control" id="nome" placeholder="Nome completo"></div>
-              </div>
-              <br>
-      
-              <div>
-                <div><input type="email" class="form-control" id="email" placeholder="Insira o e-mail"></div>
-              </div>
-              <br>
-      
-              <div>
-                <div><input type="password" class="form-control" id="password" placeholder="Senha" required=password></div>
-              </div>
-              <br>
+              {{form.as_p}}
 
-              <div>
-                <div><input type="password" class="form-control" id="confirm_password" placeholder="Confirmar Senha" required></div>
-              </div>
-              <br>
-          
-              <div>
-                <div>
-                  <select class="form-control" id="sel1">
-                  <option selected>Selecione a função</option>
-                  <option>Administrador</option>
-                  <option>Usuário</option>
-                  </select>
-                </div>
-              </div>              
-              <br>
-
-              <a href="{% url 'cad_usu' %}" type="submit" class="btn btn-primary" style="margin: 0 30px; width: 170px" id="inputSubmit">Cadastrar</a>
+              <button type="submit" class="btn btn-primary">Cadastrar</button>
               <a href="login-webiaus.html" class="btn btn-danger" style="margin: 0 30px; width: 170px">Cancelar</a>
             </form>
         </div>
